@@ -1577,18 +1577,49 @@
  0002:8063E36C       gdev_cc_initinterrupts
  0002:8063E390       gdev_cc_peek
  0002:8063E404       gdev_cc_post_stop
+ 0002:8063E428       MWInitializeCriticalSection
+ 0002:8063E42C       MWEnterCriticalSection
+ 0002:8063E45C       MWExitCriticalSection
  0002:8063E464       CBGetBytesAvailableForRead
  0002:8063E46C       CircleBufferInitialize
  0002:8063E490       CircleBufferWriteBytes
  0002:8063E598       CircleBufferReadBytes
+ 0002:8063E6D8       TRK_main
+ 0002:8063E714       TRKNubMainLoop
+ 0002:8063EA64       TRKDispatchMessage
  0002:8063EB68       def_8063EAA8
  0002:8063EB84       InitMetroTRK
  0002:8063EC1C       InitMetroTRK_BBA
+ 0002:8063EE50       TRKInitializeTarget
  0002:8063EF68       InitMetroTRKCommTable
  0002:8063F0A0       nullsub_58
+ 0002:8063F1B0       ReserveEXI2Port
+ 0002:8063F1C4       UnreserveEXI2Port
+ 0002:8063F1D8       TRK_board_display
+ 0002:8063F1F0       InitializeProgramEndTrap
+ 0002:8063F2F8       TRKGetNextEvent
+ 0002:8063F468       TRKDestructEvent
+ 0002:8063F470       TRKInitializeNub
+ 0002:8063F51C       TRKTerminateNub
+ 0002:8063F540       TRKNubWelcome
+ 0002:8063F68C       TRKGetInput
+ 0002:8063F6F8       TRKInitializeSerialHandler
+ 0002:8063F700       TRKTerminateSerialHandler
+ 0002:8063FD48       TRKTargetContinue
  0002:8063FD7C       TRKSaveExtended1Block
+ 0002:806401C4       TRKGetBuffer
  0002:80640CA4       def_80640C78
  0002:80640EB4       def_80640E88
+ 0002:80641A24       __TRK_get_MSR
+ 0002:80642538       TRKSwapAndGo
+ 0002:80642650       TRKTargetInterrupt
+ 0002:80642B78       TRKTargetSupportRequest
+ 0002:80642D6C       TRKTargetStopped
+ 0002:80642D7C       TRKTargetSetStopped
+ 0002:80643258       __DBMtrHandler
+ 0002:80643278       nullsub_133
+ 0002:8064327C       __DBIntrHandler
+ 0002:8064329C       nullsub_134
  0002:806432A0       DBInitComm
  0002:806432FC       DBOpen
  0002:80643350       DBQueryData
@@ -1597,7 +1628,9 @@
  0002:80643584       DBInitInterrupts
  0002:80643588       DBClose
  0002:8064358C       __EXI2Imm
+ 0002:80643874       __DBEXIInit
  0002:80643930       __DBEXIReadReg
+ 0002:80643A54       __DBEXIWriteReg
  0002:80643B58       __DBEXIReadRam
  0002:80643C38       __DBEXIWriteRam
  0008:80645208       gZeroVec
@@ -6714,6 +6747,7 @@
  0009:807280C8       jpt_80637C60
  0009:807281A8       jpt_806391BC
  0009:80728368       jpt_8063EAA8
+ 0009:80728520       aMetrotrkForRev
  0009:807285D8       jpt_80640C78
  0009:807285F4       jpt_80640E88
  0009:80728610       aMetrotrkOption
@@ -6727,6 +6761,7 @@
  0003:8077E530       __OSErrorTable
  0003:807CCE30       jpt_806352FC
  0003:807CD370       gDBCommTable
+ 0003:807CEE38       gTRKState
  0001:807CF360       aS_5
  0001:807CF364       a4x3
  0001:807CF378       aFur_0
@@ -6958,6 +6993,10 @@
  0003:807D6BE0       __global_destructor_chain
  0003:807D6BF0       errno
  0003:807D6C20       gIsInitialized
+ 0003:807D6C28       TRK_mainError
+ 0003:807D6C48       gTRKInputPendingPtr
+ 0003:807D6C70       __DBMtrCallback
+ 0003:807D6C74       __DBDbgCallback
  0003:807D6C7C       __DBRecvMail
  0003:807D6C80       __DBRecvDataSize
  0001:807D6E98       aId
