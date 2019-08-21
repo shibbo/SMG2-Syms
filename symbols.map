@@ -73,6 +73,7 @@
  0002:80025520       MR::isFileExist((char const *,bool))
  0002:80025570       MR::isFileExist((char const *,bool))
  0002:80025950       MR::makeScenarioArchiveFileName((char *,ulong,char const *))
+ 0002:80025B50       MR::receiveFile((char const *))
  0002:800269E0       NameObj::unk2((void))
  0002:800269F0       NameObj::unk1((void))
  0002:80026C90       FurDrawManager::add((FurCtrl *,uchar))
@@ -706,6 +707,8 @@
  0002:804BCF90       HeapMemoryWatcher::HeapMemoryWatcher((void))
  0002:804BD010       HeapMemoryWatcher::memoryErrorCallback((void *,ulong,int))
  0002:804BD030       nullsub_42
+ 0002:804BD040       RSO::setupRsoHomeButtonMenu((void))
+ 0002:804BD160       RSO::HBMCreate((HBMDataInfo const *))
  0002:804BD1D0       HeapMemoryWatcher::checkRestMemory((void))
  0002:804BD1E0       MR::getDecidedLanguageFromIPL((void))
  0002:804BD230       MR::getLanguage((void))
@@ -874,6 +877,7 @@
  0002:80500640       NWC24System::NWC24System((JKRHeap *,long))
  0002:805012E0       JKRHeap::becomeCurrentHeap((void))
  0002:80501310       JKRHeap::alloc((ulong,int,JKRHeap *))
+ 0002:80501360       JKRHeap::free((void *,JKRHeap *))
  0002:805017E0       JKRHeap::copyMemory((void *,void *,ulong))
  0002:80501810       JKRDefaultMemoryErrorRoutine(void *,ulong,int)
  0002:80501830       JKRHeap::setErrorHandler((void (*)(void *,ulong,int)))
@@ -883,6 +887,12 @@
  0002:80501880       __nwa(ulong,int)
  0002:80501890       __nwa(ulong,JKRHeap *,int)
  0002:805018A0       __dl(void *)
+ 0002:805018B0       __dla(void *)
+ 0002:805018C0       JKRHeap::state_register(const(JKRHeap::TState *,ulong))
+ 0002:805018D0       JKRHeap::state_compare(const(JKRHeap::TState const &,JKRHeap::TState const &))
+ 0002:805018F0       JKRHeap::state_dump(const(JKRHeap::TState const &))
+ 0002:80501900       JKRHeap::setAltAramStartAdr((ulong))
+ 0002:80501910       JKRHeap::getAltAramStartAdr((void))
  0002:80501A70       JKRExpHeap::create((ulong,JKRHeap *,bool))
  0002:80501C90       JKRExpHeap::JKRExpHeap((void *,ulong,JKRHeap *,bool))
  0002:80503F00       JKRUnitHeap::create((ulong,ulong,ulong,JKRHeap *,bool))
@@ -937,12 +947,78 @@
  0002:8054FE20       nullsub_37
  0002:8054FE30       nullsub_38
  0002:8054FE40       nullsub_39
- 0002:8054FE50       nullsub_40
- 0002:8054FE60       nullsub_41
+ 0002:8054FE50       RSONotifyPreRSOLinkFar
+ 0002:8054FE60       RSONotifyPostRSOLinkFar
+ 0002:80550630       FindExportIndex
+ 0002:80550830       RSOFindExportSymbolAddr
+ 0002:80550CA0       RSOListInit
+ 0002:80550DF0       RSOLinkList
+ 0002:80550E00       cnvJumpCode
+ 0002:80550F10       RSOGetJumpCodeSize
+ 0002:80550F20       RSOMakeJumpCode
+ 0002:805510D0       RSOLinkJump
+ 0002:805511E0       RFLGetWorkSize
+ 0002:80551200       RFLInitResAsync
+ 0002:805515A0       RFLExit
+ 0002:80551730       bootloadDB2Res_
+ 0002:80551960       RFLAvailable
+ 0002:80551980       RFLiAlloc32
+ 0002:805519A0       RFLiFree
+ 0002:805519B0       RFLiGetDBManager
+ 0002:805519D0       RFLiGetHDBManager
+ 0002:805519F0       RFLiGetLoader
+ 0002:80551A10       RFLiGetWorking
+ 0002:80551A30       RFLiSetWorking
+ 0002:80551A40       RFLiGetManager
+ 0002:80551A50       RFLGetAsyncStatus
+ 0002:80551B60       RFLiGetUseDeluxTex
+ 0002:80551B80       RFLiGetLastReason
+ 0002:80551BA0       RFLiSetFileBroken
+ 0002:80551C10       RFLiInitLoader
+ 0002:80552BF0       RFLFreeCachedResource
+ 0002:80552C60       RFLIsResourceCached
+ 0002:80552CB0       RFLiInitAccessInfo
+ 0002:80552D30       RFLiExitAccessInfo
+ 0002:80552D80       RFLiIsWorking
+ 0002:80552D90       RFLiStartWorking
  0002:80553058       def_80552EB4
+ 0002:80554090       RFLiCloseAsync
+ 0002:80556400       RFLSetModelDrawDoneCallback
+ 0002:80559190       RFLSetIconDrawDoneCallback
+ 0002:805591C0       RFLiInitHiddenDatabase
+ 0002:80559200       RFLiInitDatabase
+ 0002:80559270       bootloadCheckCRCCb_
+ 0002:805592E0       bootloadDBcallback_
+ 0002:80559520       RFLiBootLoadDatabaseAsync
+ 0002:8055A0A0       alarmCheckCb_
+ 0002:8055A250       RFLiInitCtrlBuf
+ 0002:8055AF00       RFLiClearDBBuffer
+ 0002:8055AFBC       NETGetUniversalCalendar
+ 0002:8055B0A0       NETGetRexPPCVersionPrintable
+ 0002:8055B0A8       NETMemCpy
+ 0002:8055B468       NETMemSet
+ 0002:8055B56C       Mail_strcpy
+ 0002:8055B59C       Mail_strlen
+ 0002:8055B5C0       STD_strnlen
+ 0002:8055B5F0       Mail_memcpy
+ 0002:8055B5F4       Mail_memset
+ 0002:8055B5F8       Mail_strcat
+ 0002:8055B648       Mail_strncat
+ 0002:8055B6A8       convNum
+ 0002:8055BC10       Mail_sprintf
+ 0002:8055BC9C       Mail_vsprintf
  0002:8055C080       def_8055BE04
+ 0002:8055C15C       NWC24FOpen
+ 0002:8055C250       NWC24iFOpenNand
  0002:8055C2D0       def_8055C28C
+ 0002:8055C388       NWC24iFOpenVF
  0002:8055DF14       def_8055DF04
+ 0002:8055DF9C       NWC24IsMsgLibOpened
+ 0002:8055DFB0       NWC24IsMsgLibOpenedByTool
+ 0002:805639E4       NWC24iEpochSecondsToDate
+ 0002:80563BB4       NWC24iDateToOSCalendarTime
+ 0002:80564614       NWC24iGetUniversalTime
+ 0002:80564A10       NWC24iSynchronizeRtcCounter
  0002:8057DD20       nullsub_4
  0002:8057EBD0       def_8057EBC4
  0002:80580D20       nullsub_46
@@ -956,6 +1032,11 @@
  0002:8059D510       nw4r::ut::detail::LinkListImpl::Erase((nw4r::ut::detail::LinkListImpl::Iterator))
  0002:8059D560       nw4r::ut::detail::LinkListImpl::Insert((nw4r::ut::detail::LinkListImpl::Iterator,nw4r::ut::LinkListNode *))
  0002:8059D590       nw4r::ut::detail::LinkListImpl::Erase((nw4r::ut::LinkListNode *))
+ 0002:805A4BF0       nw4r::db::Console_Printf((nw4r::db::detail::ConsoleHead *,char const *,...))
+ 0002:805A4C60       nw4r::db::Console_GetTotalLines((nw4r::db::detail::ConsoleHead *))
+ 0002:805A67F0       nw4r::db::Assertion_Printf_((char const *,...))
+ 0002:805A6890       nw4r::db::ShowStack_((ulong))
+ 0002:805A6A00       nw4r::db::Panic((char const *,int,char const *,...))
  0002:805A6DE0       nw4r::lyt::LytInit((void))
  0002:805A6E40       nw4r::lyt::Pane::Pane((nw4r::lyt::res::Pane const *))
  0002:805A6F70       nw4r::lyt::Pane::~Pane((void))
@@ -991,13 +1072,26 @@
  0002:805B1EA0       nw4r::lyt::ResourceAccessor::ResourceAccessor((void))
  0002:805B1EC0       nw4r::lyt::detail::EqualsResName((char const *,char const *))
  0002:805B1EF0       nw4r::lyt::detail::EqualsMaterialName((char const *,char const *))
+ 0002:805B2A90       PPCMfmsr
+ 0002:805B2AA0       PPCMtmsr
+ 0002:805B2AB0       PPCMfhid0
+ 0002:805B2AC0       PPCMthid0
+ 0002:805B2AD0       PPCMfl2cr
+ 0002:805B2AE0       PPCMtl2cr
  0002:805B2B00       PPCSync
  0002:805B2B10       PPCHalt
+ 0002:805B2B90       PPCMffpscr
+ 0002:805B2BB0       PPCMtfpscr
+ 0002:805B2BE0       PPCMfhid2
  0002:805B3770       OSInit
  0002:805B40D0       OSRegisterVersion
  0002:805B41F0       OSCreateAlarm
  0002:805B4450       OSSetAlarm
  0002:805B4550       OSCancelAlarm
+ 0002:805B49A0       OnReset
+ 0002:805B4A30       OSSetAlarmUserData
+ 0002:805B4A40       OSGetAlarmUserData
+ 0002:805B4A50       OSSetAlarmTag
  0002:805B4CC0       OSFreeToHeap
  0002:805B4D50       OSInitAlloc
  0002:805B4DC0       OSCreateHeap
@@ -1014,10 +1108,29 @@
  0002:805B4EF0       OSAllocFromMEM1ArenaLo
  0002:805B4F30       __AIClockInit
  0002:805B5150       __OSInitAudioSystem
+ 0002:805B5320       __OSStopAudioSystem
+ 0002:805B53F0       DCEnable
+ 0002:805B5410       DCInvalidateRange
  0002:805B5440       DCFlushRange
+ 0002:805B5530       ICInvalidateRange
  0002:805B5570       ICFlashInvalidate
+ 0002:805B55D0       DMAErrorHandler
+ 0002:805B5720       __OSCacheInit
+ 0002:805B5A70       OSSaveFPUContext
+ 0002:805B5AE0       OSGetCurrentContext
+ 0002:805B5AF0       OSSaveContext
+ 0002:805B5B70       OSLoadContext
+ 0002:805B5C50       OSGetStackPointer
+ 0002:805B5C60       OSSwitchFiber
+ 0002:805B5C90       OSSwitchFiberEx
+ 0002:805B5CC0       OSClearContext
+ 0002:805B5CF0       OSInitContext
+ 0002:805B5DB0       OSDumpContext
  0002:805B6210       OSReport
+ 0002:805B6290       OSVReport
  0002:805B62A0       OSPanic
+ 0002:805B63D0       OSSetErrorHandler
+ 0002:805B6660       __OSUnhandledException
  0002:805B6E60       __OSGetExecParams
  0002:805B6E90       callback
  0002:805B6EA0       __OSLaunchNextFirmware
@@ -1025,9 +1138,16 @@
  0002:805B99D0       OSDisableInterrupts
  0002:805B9A10       OSRestoreInterrupts
  0002:805B9A40       __OSSetInterruptHandler
+ 0002:805B9DA0       __OSMaskInterrupts
  0002:805B9E20       __OSUnmaskInterrupts
  0002:805BA220       OSSendMessage
  0002:805BA2F0       OSReceiveMessage
+ 0002:805BA510       MEMIntrruptHandler
+ 0002:805BA560       OSProtectRange
+ 0002:805BA630       ConfigMEM1_24MB
+ 0002:805BA6B0       ConfigMEM1_48MB
+ 0002:805BA790       ConfigMEM2_52MB
+ 0002:805BA870       ConfigMEM2_56MB
  0002:805BAD10       OSInitMutex
  0002:805BAD50       OSLockMutex
  0002:805BAE30       OSUnlockMutex
@@ -1038,7 +1158,17 @@
  0002:805BC7C0       OSInitThreadQueue
  0002:805BC7D0       OSGetCurrentThread
  0002:805BC830       OSDisableScheduler
+ 0002:805BC870       OSEnableScheduler
+ 0002:805BC8B0       UnsetRun
+ 0002:805BC920       __OSGetEffectivePriority
+ 0002:805BC960       SetEffectivePriority
+ 0002:805BCB10       __OSPromoteThread
+ 0002:805BCB60       SelectThread
+ 0002:805BCD90       __OSReschedule
  0002:805BD520       OSResumeThread
+ 0002:805BD7C0       OSSuspendThread
+ 0002:805BDC40       SleepAlarmHandler
+ 0002:805BDCC0       OSSleepTicks
  0002:805BDD70       OSGetTime
  0002:805BDD90       OSGetTick
  0002:805BDDA0       __OSGetSystemTime
@@ -1074,6 +1204,8 @@
  0002:805C02F0       exit
  0002:805C33E0       __VIRetraceHandler
  0002:805C3744       def_805C372C
+ 0002:805C3BF0       VISetPreRetraceCallback
+ 0002:805C3C40       VISetPostRetraceCallback
  0002:805C3C90       getTiming
  0002:805C3DA0       def_805C3CAC
  0002:805C3DB0       __VIInit
@@ -1177,16 +1309,24 @@
  0002:805D647C       def_805D618C
  0002:805D653C       def_805D6538
  0002:805D6884       def_805D6788
+ 0002:805D6B20       __DVDTestAlarm
  0002:805D6B50       nullsub_49
  0002:805D6B60       __DVDClearWaitingQueue
  0002:805D79C0       DVDSetAutoFatalMessaging
  0002:805D7EC0       DVDLowInit
  0002:805DA200       DVDLowUnmaskStatusInterrupts
  0002:805DA210       DVDLowMaskCoverInterrupt
+ 0002:805DC500       MEMCreateExpHeapEx
+ 0002:805DC5B0       MEMDestroyExpHeap
+ 0002:805DC5E0       MEMAllocFromExpHeapEx
+ 0002:805DC690       MEMFreeToExpHeap
+ 0002:805DC760       MEMGetAllocatableSizeForExpHeapEx
  0002:805DC8C0       MEMFreeToAllocator
+ 0002:805DD150       NANDPrivateCreate
  0002:805DD4D0       NANDReadAsync
  0002:805DD5C0       NANDWriteAsync
  0002:805DD6E0       NANDSeekAsync
+ 0002:805DE6E0       NANDPrivateOpen
  0002:805DE770       NANDOpenAsync
  0002:805DE960       NANDCloseAsync
  0002:805DEF0C       def_805DEC4C
@@ -1298,8 +1438,23 @@
  0002:8062DA64       sdpu_sort_attr_list
  0002:8062DAB4       strlen
  0002:8062DAD0       __va_arg
+ 0002:8062DB98       __register_global_object
+ 0002:8062DBB0       __destroy_global_chain
  0002:8062DBF8       __construct_new_array
+ 0002:8062DCFC       __partial_array_destructor::~__partial_array_destructor((void))
+ 0002:8062DDB8       __construct_array
+ 0002:8062DEB0       __destroy_arr
+ 0002:8062DF28       __destroy_new_array
+ 0002:8062DFA8       __ptmf_test
+ 0002:8062DFD8       __ptmf_cmpr
+ 0002:8062E014       __ptmf_scall
  0002:8062E03C       __cvt_fp2unsigned
+ 0002:8062E098       __save_fpr
+ 0002:8062E0BC       __save_fpr23
+ 0002:8062E0C0       __save_fpr24
+ 0002:8062E0C8       __save_fpr26
+ 0002:8062E0CC       __save_fpr27
+ 0002:8062E0E4       __restore_fpr
  0002:8062E13C       _savegpr_17
  0002:8062E14C       _savegpr_19
  0002:8062E150       _savegpr_22
@@ -1322,8 +1477,14 @@
  0002:8062E2B4       __div2i
  0002:8062E3EC       __mod2u
  0002:8062E4D0       __mod2i
+ 0002:8062E5DC       __shl2i
+ 0002:8062E600       __shr2u
  0002:8062E788       __cvt_dbl_usll
  0002:8062E854       __cvt_dbl_ull
+ 0002:8062E8FC       __init_cpp_exceptions
+ 0002:8062E938       __fini_cpp_exceptions
+ 0002:8062E96C       __register_fragment
+ 0002:8062E9B8       __unregister_fragment
  0002:8062E9E0       __sys_free
  0002:8062EA98       Block_link
  0002:8062EC90       deallocate_from_fixed_pools
@@ -1406,6 +1567,20 @@
  0002:8063DDF4       __ieee754_sqrt
  0002:8063E03C       nan
  0002:8063E040       sqrt
+ 0002:8063E1B0       gdev_cc_initialize
+ 0002:8063E1EC       gdev_cc_close
+ 0002:8063E1F4       gdev_cc_open
+ 0002:8063E218       gdev_cc_shutdown
+ 0002:8063E220       gdev_cc_read
+ 0002:8063E2D4       gdev_cc_write
+ 0002:8063E348       gdev_cc_pre_continue
+ 0002:8063E36C       gdev_cc_initinterrupts
+ 0002:8063E390       gdev_cc_peek
+ 0002:8063E404       gdev_cc_post_stop
+ 0002:8063E464       CBGetBytesAvailableForRead
+ 0002:8063E46C       CircleBufferInitialize
+ 0002:8063E490       CircleBufferWriteBytes
+ 0002:8063E598       CircleBufferReadBytes
  0002:8063EB68       def_8063EAA8
  0002:8063EB84       InitMetroTRK
  0002:8063EC1C       InitMetroTRK_BBA
@@ -1414,8 +1589,17 @@
  0002:8063FD7C       TRKSaveExtended1Block
  0002:80640CA4       def_80640C78
  0002:80640EB4       def_80640E88
- 0002:80643584       nullsub_57
- 0002:80643588       nullsub_56
+ 0002:806432A0       DBInitComm
+ 0002:806432FC       DBOpen
+ 0002:80643350       DBQueryData
+ 0002:806433F4       DBRead
+ 0002:80643474       DBWrite
+ 0002:80643584       DBInitInterrupts
+ 0002:80643588       DBClose
+ 0002:8064358C       __EXI2Imm
+ 0002:80643930       __DBEXIReadReg
+ 0002:80643B58       __DBEXIReadRam
+ 0002:80643C38       __DBEXIWriteRam
  0008:80645208       gZeroVec
  0008:80646D80       aAudioresSpkres
  0008:80649930       cCreateTable__28_unnamed_NameObjFactory_cpp_
@@ -5837,6 +6021,14 @@
  0009:8070C9F8       aOsErrorAppload
  0009:8070CA50       aOsErrorThisFir
  0009:8070CAB0       aError002AnErro
+ 0009:8070CC40       aMachineCheckRe
+ 0009:8070CC58       aHid20xXSrr10xX
+ 0009:8070CC78       aMachineCheckWa
+ 0009:8070CCA8       aDmaerrorhandle
+ 0009:8070CCE4       aTheFollowingEr
+ 0009:8070CD1D       aRequestedALock
+ 0009:8070CD5D       aDmaAttemptedTo
+ 0009:8070CD89       aDmaMissedInDat
  0009:8070D260       aDiscErrorOccur
  0009:8070D279       aTimeoutErrorOc
  0009:8070D295       aUnexpectedErro
@@ -6532,8 +6724,9 @@
  0003:8072B894       MainLoopFrameworkAlarm::sList(void)
  0003:8072C360       J3DSys::mCurrentMtx(void)
  0003:8077E4C0       __OSRebootParams
- 0003:8077E530       jpt_805B67E0
+ 0003:8077E530       __OSErrorTable
  0003:807CCE30       jpt_806352FC
+ 0003:807CD370       gDBCommTable
  0001:807CF360       aS_5
  0001:807CF364       a4x3
  0001:807CF378       aFur_0
@@ -6558,11 +6751,15 @@
  0001:807D0410       aEu
  0001:807D0414       aCn
  0001:807D0418       aKr
+ 0001:807D05BC       ARALT_AramStartAdr
  0001:807D05C0       aS_3
  0001:807D05E0       aDsi
  0001:807D05E4       aIsi
  0001:807D05F8       aS_4
  0001:807D06F0       aTplC
+ 0001:807D06F8       __RFLVersion
+ 0001:807D06FC       sRFLLastErrCode
+ 0001:807D0710       NETRexPPCVersionPrintableString
  0001:807D0740       aSS_3
  0001:807D0748       a24
  0001:807D0770       aEucJp
@@ -6598,6 +6795,7 @@
  0001:807D0958       __OSCurrHeap
  0001:807D0960       __OSArenaLo
  0001:807D0964       s_mem2ArenaLo
+ 0001:807D0968       __OSFpscrEnableBits
  0001:807D0970       a016llx
  0001:807D0978       aD
  0001:807D0980       aS_2
@@ -6661,6 +6859,7 @@
  0001:807D0D28       aFalse_0
  0001:807D0D30       aBadUa
  0001:807D0D38       aBadDm
+ 0001:807D0D40       fragmentID
  0001:807D0D54       __float_huge
  0003:807D0DA0       gAcosTable__22_unnamed_MathUtil_cpp_
  0003:807D0DA4       sInstance__29SingletonHolder_10GameSystem_
@@ -6676,6 +6875,7 @@
  0003:807D5C60       NrvGameSystem::GameSystemNormal::sInstance(void)
  0003:807D5C64       sInstance__49SingletonHolder_30GameSystemResetAndPowerProcess_
  0003:807D5CA0       NrvGameSystemSceneController::GameSystemSceneControllerNotInitialized::sInstance(void)
+ 0003:807D5D08       HBMCreateRSO
  0003:807D5D28       MainLoopFramework::sManager(void)
  0003:807D5D60       sInstance__Q231_unnamed_NANDErrorSequence_cpp_40NANDErrorSequenceLessBlockOrInodeConfirm
  0003:807D5D98       WPadRumble::sInstanceForCallback(void)
@@ -6687,6 +6887,11 @@
  0003:807D6290       JUTVideo::sVideoInterval(void)
  0003:807D62A0       JUTXfb::sManager(void)
  0003:807D62F0       J3DShape::sOldVcdVatCmd(void)
+ 0003:807D6388       sRFLManager
+ 0003:807D638C       sRFLLastReason
+ 0003:807D63A4       WrBufferMutex
+ 0003:807D63A8       InstanceIdGen
+ 0003:807D65DC       nw4r::db::sAssertionConsole(void)
  0003:807D65E8       nw4r::lyt::Pane::typeInfo(void)
  0003:807D65F0       nw4r::lyt::Layout::mspAllocator(void)
  0003:807D6624       __OSInNandBoot
@@ -6698,6 +6903,10 @@
  0003:807D6684       s_mem2ArenaHi
  0003:807D6688       __OSNextPartitionType
  0003:807D6690       DVDLowIntType
+ 0003:807D66B0       __OSLastInterruptSrr0
+ 0003:807D66E8       Reschedule
+ 0003:807D66EC       RunQueueHint
+ 0003:807D66F0       RunQueueBits
  0003:807D66F8       IpcBufferHi
  0003:807D6700       ResetDown
  0003:807D6704       StmReady
@@ -6746,7 +6955,11 @@
  0003:807D6A80       IPCBufferHi
  0003:807D6AB4       hId_1
  0003:807D6AB8       __PADSpec
+ 0003:807D6BE0       __global_destructor_chain
  0003:807D6BF0       errno
+ 0003:807D6C20       gIsInitialized
+ 0003:807D6C7C       __DBRecvMail
+ 0003:807D6C80       __DBRecvDataSize
  0001:807D6E98       aId
  0001:807D6FF8       aB6Ac4
  0001:807D73FC       aFff_2
