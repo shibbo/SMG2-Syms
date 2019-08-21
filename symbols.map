@@ -170,10 +170,15 @@
  0002:80040830       vecKillElement__2MRFRCQ29JGeometry8TVec3_f_RCQ29JGeometry8TVec3_f_PQ29JGeometry8TVec3_f_
  0002:80040C60       MR::CurrentHeapRestorer::CurrentHeapRestorer((JKRHeap *))
  0002:80040CC0       MR::CurrentHeapRestorer::~CurrentHeapRestorer((void))
+ 0002:80040D30       MR::NewDeleteAllocator::alloc((MEMAllocator *,ulong))
+ 0002:80040D40       MR::NewDeleteAllocator::free((MEMAllocator *,void *))
  0002:80040D70       MR::getCurrentHeap((void))
  0002:80040D80       MR::getStationedHeapNapa((void))
  0002:80040D90       MR::getStationedHeapGDDR3((void))
  0002:80040DB0       MR::getSceneHeapGDDR3((void))
+ 0002:80040E10       MR::becomeCurrentHeap((JKRHeap *))
+ 0002:80040E70       MR::isEqualCurrentHeap((JKRHeap *))
+ 0002:80040E90       MR::adjustHeapSize((JKRExpHeap *,char const *))
  0002:800411D0       MR::zeroMemory((void *,ulong))
  0002:80042C70       MR::getJ3DModel((LiveActor const *))
  0002:80042C90       MR::calcJ3DModel((LiveActor *))
@@ -218,7 +223,6 @@
  0002:8005D7C0       set_f___Q29JGeometry8TVec2_f_FRCQ29JGeometry8TVec2_f__v
  0002:8005F400       j_strncpy
  0002:8005F530       MR::extractString((char *,char const *,ulong,ulong))
- 0002:8005F5C0       strlen
  0002:8005F5D0       MR::isEqualString((char const *,char const *))
  0002:8005F920       MR::scan32((char const *,char const *,long *))
  0002:8005F980       MR::scanf32((char const *,char const *,float *))
@@ -761,6 +765,7 @@
  0002:804C4D10       NerveExecutor::getNerveStep(const(void))
  0002:804C4D20       OSThreadWrapper::OSThreadWrapper((ulong,int,int,JKRHeap *))
  0002:804C4DA0       OSThreadWrapper::~OSThreadWrapper((void))
+ 0002:804C5140       JKRExpHeap::adjustSize((void))
  0002:804C52B0       JKRHeap::getMaxAllocatableSize((int))
  0002:804C54C0       PSMTXRotRad
  0002:804C5720       nullsub_43
@@ -867,6 +872,7 @@
  0002:804FEC60       NWC24MessengerSub::SendState::SendState((NWC24Messenger *))
  0002:804FF4A4       def_804FF458
  0002:80500640       NWC24System::NWC24System((JKRHeap *,long))
+ 0002:805012E0       JKRHeap::becomeCurrentHeap((void))
  0002:80501310       JKRHeap::alloc((ulong,int,JKRHeap *))
  0002:805017E0       JKRHeap::copyMemory((void *,void *,ulong))
  0002:80501810       JKRDefaultMemoryErrorRoutine(void *,ulong,int)
@@ -1287,6 +1293,11 @@
  0002:8062D0C8       def_8062D054
  0002:8062D19C       def_8062D128
  0002:8062D678       def_8062D5D4
+ 0002:8062D760       sdpu_compare_uuid_arrays
+ 0002:8062D9D4       sdpu_compare_uuid_with_attr
+ 0002:8062DA64       sdpu_sort_attr_list
+ 0002:8062DAB4       strlen
+ 0002:8062DAD0       __va_arg
  0002:8062DBF8       __construct_new_array
  0002:8062E03C       __cvt_fp2unsigned
  0002:8062E13C       _savegpr_17
@@ -1330,12 +1341,37 @@
  0002:8062FEE8       __num2dec_internal
  0002:8063004C       __num2dec
  0002:806301F0       __dec2num
+ 0002:8063094C       __prep_buffer
+ 0002:80630974       __flush_buffer
  0002:80630D34       fclose
  0002:80630DF0       fflush
+ 0002:80630F24       _ftell
+ 0002:80630FCC       ftell
+ 0002:80630FD0       _fseek
+ 0002:80631194       mbtowc
+ 0002:806311AC       __mbtowc_noconv
+ 0002:806311F8       __wctomb_noconv
+ 0002:80631214       mbstowcs
+ 0002:806312D4       wcstombs
+ 0002:8063138C       memmove
+ 0002:80631458       memchr
+ 0002:80631484       __memrchr
  0002:806314B0       memcmp
+ 0002:806314FC       __copy_longs_aligned
+ 0002:806315B8       __copy_longs_rev_aligned
+ 0002:80631660       __copy_longs_unaligned
+ 0002:80631720       __copy_longs_rev_unaligned
  0002:8063182C       __signbitd
  0002:80631844       __fpclassifyd
+ 0002:806318C0       __stdio_atexit
+ 0002:806318D0       parse_format
  0002:80631E44       def_80631C60
+ 0002:80631E8C       long2str
+ 0002:806320CC       longlong2str
+ 0002:8063237C       double2hex
+ 0002:80632744       round_decimal
+ 0002:8063286C       float2str
+ 0002:80633008       __pformatter
  0002:806336B0       def_80633108
  0002:80633BC8       snprintf
  0002:80633CBC       sprintf
@@ -1347,9 +1383,11 @@
  0002:806353DC       strncpy
  0002:80635420       strcat
  0002:8063544C       strcmp
+ 0002:806355A8       strchr
  0002:80635620       strstr
  0002:80637E54       def_80637C60
  0002:8063983C       def_806391BC
+ 0002:80639D94       fwide
  0002:80639F70       __ieee754_acos
  0002:8063A23C       __ieee754_asin
  0002:8063A4D4       __ieee754_atan2
@@ -1394,6 +1432,14 @@
  0008:8065B6E0       __ptmf_null
  0008:8065B708       aGcnMemAllocCIn
  0008:8065B73E       aMetrowerksCwRu
+ 0008:8065BD78       aInf
+ 0008:8065BD7D       aInf_0
+ 0008:8065BD82       aInf_1
+ 0008:8065BD86       aInf_2
+ 0008:8065BD8A       aNan
+ 0008:8065BD8F       aNan_0
+ 0008:8065BD94       aNan_1
+ 0008:8065BD98       aNan_2
  0009:8065C7E0       aMapobj
  0009:8065C7E8       aMapobjstrongli
  0009:8065C7FC       aMapobjnoshadow
@@ -1661,6 +1707,13 @@
  0009:8065E3B4       aSPa
  0009:8065E3BC       aMovelimit
  0009:8065E3C8       aWatersurface
+ 0009:8065E530       aGalaxyname
+ 0009:8065E558       aFilecachesize
+ 0009:8065E568       aGame_3
+ 0009:8065E570       aSD_0
+ 0009:8065E590       a0
+ 0009:8065E592       a000
+ 0009:8065E5A4       aGalaxynameS
  0009:8065EA44       jpt_8004A068
  0009:8066908C       jpt_8005086C
  0009:80669208       jpt_80053CB4
@@ -6474,6 +6527,7 @@
  0009:80728610       aMetrotrkOption
  0009:8072862F       aEnable
  0009:80728637       aDisable
+ 0003:807286B0       sMutex__Q22MR14MutexHolder_1_
  0003:8072B870       sMutex__Q22MR14MutexHolder_2_
  0003:8072B894       MainLoopFrameworkAlarm::sList(void)
  0003:8072C360       J3DSys::mCurrentMtx(void)
@@ -6692,6 +6746,7 @@
  0003:807D6A80       IPCBufferHi
  0003:807D6AB4       hId_1
  0003:807D6AB8       __PADSpec
+ 0003:807D6BF0       errno
  0001:807D6E98       aId
  0001:807D6FF8       aB6Ac4
  0001:807D73FC       aFff_2
