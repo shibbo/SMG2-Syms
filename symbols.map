@@ -11,6 +11,7 @@
  0002:80006F00       mult__Q29JGeometry38TMatrix34_Q29JGeometry13SMatrix34C_f__CFRCQ29JGeometry8TVec3_f_RQ29JGeometry8TVec3_f_
  0002:80006F90       set_f___Q29JGeometry8TVec3_f_Ffff_v
  0002:80007380       concat__Q29JGeometry38TMatrix34_Q29JGeometry13SMatrix34C_f__FRCQ29JGeometry13SMatrix34C_f_RCQ29JGeometry13SMatrix34C_f_
+ 0002:80007B60       sqrt__Q29JGeometry8TUtil_f_Ff
  0002:80007BA0       set_f___Q29JGeometry8TVec4_f_Fffff_v
  0002:80008390       MR::startLevelSound((LiveActor const *,char const *,long,long,long))
  0002:80008810       MR::startBck((LiveActor const *,char const *,char const *))
@@ -24,7 +25,9 @@
  0002:8000CFB0       JMapInfoIter::isValid(const(void))
  0002:8000D750       dot__Q29JGeometry8TVec3_f_CFRCQ29JGeometry8TVec3_f_
  0002:8000DB80       JMathInlineVEC::PSVECSubtract((Vec const *,Vec const *,Vec *))
+ 0002:8000DBB0       zero__Q29JGeometry8TVec3_f_Fv
  0002:8000E080       MR::isNearPlayerAnyTime((LiveActor const *,float))
+ 0002:8000E740       __as__Q29JGeometry8TVec3_f_FRCQ29JGeometry8TVec3_f_
  0002:8000E9C0       set_f___Q29JGeometry8TVec3_f_FRCQ29JGeometry8TVec3_f__v
  0002:8000F020       __ct_f___Q29JGeometry8TVec3_f_Ffff_Pv
  0002:8000F540       MR::makeMtxTR((float *[4],LiveActor const *))
@@ -116,6 +119,7 @@
  0002:8002D460       MR::getJoint((LiveActor const *,char const *))
  0002:8002D4A0       MR::getJoint((LiveActor const *,ushort))
  0002:8002DDF0       nw4r::lyt::Pane::GetRuntimeTypeInfo(const(void))
+ 0002:8002EDD0       MR::hidePane((LayoutActor *,char const *))
  0002:8002EFD0       copyPaneTrans__2MRFPQ29JGeometry8TVec2_f_PC11LayoutActorPCc
  0002:8002F330       MR::setLayoutScalePosAtPaneScaleTransIfExecCalcAnim((LayoutActor *,LayoutActor const *,char const *))
  0002:8002F3A0       LayoutHolder::getResOther(const(char const *))
@@ -170,6 +174,7 @@
  0002:80040D80       MR::getStationedHeapNapa((void))
  0002:80040D90       MR::getStationedHeapGDDR3((void))
  0002:80040DB0       MR::getSceneHeapGDDR3((void))
+ 0002:800411D0       MR::zeroMemory((void *,ulong))
  0002:80042C70       MR::getJ3DModel((LiveActor const *))
  0002:80042C90       MR::calcJ3DModel((LiveActor *))
  0002:80042CF0       MR::getJ3DModelData((LiveActor const *))
@@ -206,9 +211,11 @@
  0002:80058200       MR::getZonePlacementMtx((JMapInfoIter const &))
  0002:800583F0       MR::ProhibitSchedulerAndInterrupts::ProhibitSchedulerAndInterrupts((bool))
  0002:80058430       MR::ProhibitSchedulerAndInterrupts::~ProhibitSchedulerAndInterrupts((void))
+ 0002:80058560       MR::getScreenWidth((void))
  0002:8005A640       MR::actorSoundMovement((LiveActor *))
  0002:8005B8B0       nullsub_26
  0002:8005C0D0       initStarPointerTarget__2MRFP9LiveActorfRCQ29JGeometry8TVec3_f_
+ 0002:8005D7C0       set_f___Q29JGeometry8TVec2_f_FRCQ29JGeometry8TVec2_f__v
  0002:8005F400       j_strncpy
  0002:8005F530       MR::extractString((char *,char const *,ulong,ulong))
  0002:8005F5C0       strlen
@@ -225,6 +232,7 @@
  0002:80060490       MR::startFunctionAsyncExecute((MR::FunctorBase const &,int,char const *))
  0002:80060530       MR::waitForEndFunctionAsyncExecute((char const *))
  0002:80060570       MR::isEndFunctionAsyncExecute((char const *))
+ 0002:80060720       MR::isScreen16Per9((void))
  0002:80060810       MR::setLayoutDefaultAllocator((void))
  0002:80061780       def_8006173C
  0002:80061790       nullsub_35
@@ -560,6 +568,7 @@
  0002:8045BFB0       StageDataHolder::findPlacedStageDataHolder(const(JMapInfoIter const &))
  0002:8045C0B0       StageDataHolder::getStageDataHolderFromZoneId((int))
  0002:8045CC10       MR::getStageDataHolder((void))
+ 0002:8045EE90       BatteryInfo::exeLowHide((void))
  0002:80465360       NerveExecutor::updateNerve((void))
  0002:8046C2C0       LayoutActor::kill((void))
  0002:8046D130       LayoutActor::kill((void))
@@ -618,6 +627,9 @@
  0002:804A7040       WipeHolderBase::addWipeLayout((WipeLayoutBase *))
  0002:804A70B0       WipeHolderBase::updateWipe((char const *))
  0002:804A7120       WipeHolderBase::findWipe(const(char const *))
+ 0002:804AC200       SpkSystem::connect((long))
+ 0002:804AC210       SpkSystem::disconnect((long))
+ 0002:804AC270       SpkSystem::extensionProcess((long,long))
  0002:804AE340       AudSystemWrapper::isLoadDoneWaveDataAtSystemInit(const(void))
  0002:804B0AA0       DrawSyncManager::start((ulong,long))
  0002:804B0B30       DrawSyncManager::resetIfAborted((void))
@@ -778,10 +790,68 @@
  0002:804CDD40       StationedArchiveLoader::loadScenarioData((JKRHeap *))
  0002:804CDF70       MR::getStationedFileInfoTable((void))
  0002:804CDF80       WPad::WPad((long))
+ 0002:804CE150       WPad::setReadInfo((WPadReadDataInfo *))
+ 0002:804CE160       WPad::update((void))
+ 0002:804CE240       WPad::getRumbleInstance(const(void))
+ 0002:804CE250       WPad::startLeaveWatcher((void))
+ 0002:804CE260       WPad::getBattery(const(void))
+ 0002:804CE270       WPad::connected((void))
+ 0002:804CE2C0       WPad::disconnected((void))
+ 0002:804CE310       WPad::connectCallback((long,long))
+ 0002:804CE370       WPad::extensionCallback((long,long))
+ 0002:804CE3F0       WPad::getInfoCallback((long,long))
+ 0002:804CE420       MR::isDeviceFreeStyle((KPADStatus const *))
+ 0002:804CE600       WPad::getKPadStatus(const(ulong))
+ 0002:804CE610       WPad::getValidStatusCount(const(void))
+ 0002:804CE620       WPad::getEnableAccelPastCount(const(ulong))
+ 0002:804CE640       getAcceleration__4WPadCFPQ29JGeometry8TVec3_f_Ul
+ 0002:804CE660       getPastAcceleration__4WPadCFPQ29JGeometry8TVec3_f_lUl
+ 0002:804CE680       WPadAcceleration::WPadAcceleration((WPad const *,ulong))
+ 0002:804CE750       getAcceleration__16WPadAccelerationCFPQ29JGeometry8TVec3_f_
+ 0002:804CE7B0       getPastAcceleration__16WPadAccelerationCFPQ29JGeometry8TVec3_f_l
+ 0002:804CE820       WPadAcceleration::isStationary(const(void))
+ 0002:804CE830       WPadAcceleration::isBalanced(const(void))
+ 0002:804CE850       WPadAcceleration::update((void))
  0002:804CEE40       WPadButton::WPadButton((WPad const *))
+ 0002:804CEEA0       WPadButton::update((void))
+ 0002:804CF0E0       WPadButton::isChangeAnyState(const(void))
+ 0002:804CF130       WPadHVSwing::WPadHVSwing((WPad const *,ulong))
+ 0002:804CF180       WPadHVSwing::updateSwing((void))
+ 0002:804CF290       WPadHVSwing::updateCentrifugal((void))
+ 0002:804CF430       WPadHVSwing::update((void))
+ 0002:804CF550       WPadReadDataInfo::getKPadStatus(const(ulong))
+ 0002:804CF590       WPadReadDataInfo::getValidStatusCount(const(void))
  0002:804CF720       WPadHolder::WPadHolder((void))
+ 0002:804CFB50       WPadHolder::getWPad((long))
+ 0002:804CFC40       getWPadHolder__24_unnamed_WPadHolder_cpp_Fv
+ 0002:804CFC50       MR::getWPad((long))
+ 0002:804CFDF0       WPadInfoChecker::WPadInfoChecker((WPad *))
+ 0002:804CFE10       WPadInfoChecker::getBattery(const(void))
+ 0002:804CFE20       WPadInfoChecker::successGetInfo((void))
+ 0002:804CFE30       WPadInfoChecker::startCheck((void))
+ 0002:804CFE80       WPadInfoChecker::reset((void))
+ 0002:804CFEA0       WPadInfoChecker::update((void))
+ 0002:804CFEE0       WPadLeaveWatcher::WPadLeaveWatcher((WPad *))
+ 0002:804CFF00       WPadLeaveWatcher::update((void))
+ 0002:804CFFF0       WPadLeaveWatcher::start((void))
  0002:804D0010       WPadPointer::WPadPointer((WPad const *))
+ 0002:804D00E0       WPadPointer::reset((void))
+ 0002:804D01C0       WPadPointer::update((void))
+ 0002:804D03A0       getPointingPos__11WPadPointerCFPQ29JGeometry8TVec2_f_
+ 0002:804D0450       WPadPointer::getEnablePastCount(const(void))
+ 0002:804D0460       getPointingPosBasedOnScreen__11WPadPointerCFPQ29JGeometry8TVec2_f_
+ 0002:804D0510       RumbleChannel::clear((void))
+ 0002:804D0530       RumbleChannel::update((void))
+ 0002:804D05A0       RumbleChannel::setPattern((void const *,RumblePattern const &,ulong,bool))
+ 0002:804D05C0       WPadRumble::WPadRumble((WPad *))
+ 0002:804D0740       WPadRumble::registInstance((void))
+ 0002:804D0780       WPadRumble::stop((void))
+ 0002:804D07F0       WPadRumble::update((void))
+ 0002:804D09B0       WPadRumble::getRumbleInstance(const(void))
  0002:804D0D20       nullsub_1
+ 0002:804D0D30       WPadStick::WPadStick((WPad const *))
+ 0002:804D0D70       WPadStick::update((void))
+ 0002:804D0F90       WPadStick::isChanged(const(void))
  0002:804D3920       nullsub_18
  0002:804D57F0       GameSequenceDirector::GameSequenceDirector((void))
  0002:804D5980       GameSequenceDirector::draw(const(void))
@@ -1017,6 +1087,7 @@
  0002:805C8230       PSMTXTransApply
  0002:805C8280       PSMTXScale
  0002:805C8910       C_MTXOrtho
+ 0002:805C8C10       PSVECDistance
  0002:805C9420       GXInit
  0002:805CA350       GXInitFifoBase
  0002:805CA4E0       GXSetCPUFifo
@@ -1154,6 +1225,10 @@
  0002:805E79D0       ISFS_CloseAsync
  0002:805E8134       def_805E80F0
  0002:805E8DD4       def_805E84C0
+ 0002:805EB410       WPADProbe
+ 0002:805EB5C0       WPADSetExtensionCallback
+ 0002:805EB790       WPADGetInfoAsync
+ 0002:805EB9B0       WPADControlMotor
  0002:805F017C       def_805EF0C0
  0002:805F0778       def_805F0694
  0002:805F2488       def_805F1858
@@ -5381,6 +5456,7 @@
  0009:806FC8F8       aObjectdataWipe_0
  0009:806FC918       aObjectdataWipe_1
  0009:806FC938       aLightdataLight
+ 0009:806FE77C       aOA
  0009:806FF2E8       aAppearpowersta
  0009:806FF2FC       aPurple
  0009:806FF97C       aIsopenscenario
@@ -6548,6 +6624,7 @@
  0003:807D5CA0       NrvGameSystemSceneController::GameSystemSceneControllerNotInitialized::sInstance(void)
  0003:807D5D28       MainLoopFramework::sManager(void)
  0003:807D5D60       sInstance__Q231_unnamed_NANDErrorSequence_cpp_40NANDErrorSequenceLessBlockOrInodeConfirm
+ 0003:807D5D98       WPadRumble::sInstanceForCallback(void)
  0003:807D6114       JKRHeap::sCurrentHeap(void)
  0003:807D6118       JKRHeap::sRootHeap(void)
  0003:807D611C       JKRHeap::mErrorHandler(void)
