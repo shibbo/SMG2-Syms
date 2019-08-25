@@ -8,6 +8,7 @@
  0001:80004360       __init_hardware
  0001:80004744       aMetrowerksTarg
  0002:80006EA0       nullsub_27
+ 0002:80006EC0       identity__Q29JGeometry38TMatrix34_Q29JGeometry13SMatrix34C_f__Fv
  0002:80006F00       mult__Q29JGeometry38TMatrix34_Q29JGeometry13SMatrix34C_f__CFRCQ29JGeometry8TVec3_f_RQ29JGeometry8TVec3_f_
  0002:80006F90       set_f___Q29JGeometry8TVec3_f_Ffff_v
  0002:80007380       concat__Q29JGeometry38TMatrix34_Q29JGeometry13SMatrix34C_f__FRCQ29JGeometry13SMatrix34C_f_RCQ29JGeometry13SMatrix34C_f_
@@ -37,6 +38,7 @@
  0002:80012850       MR::sendMsgPushAndKillVelocityToTarget((LiveActor *,HitSensor *,HitSensor *))
  0002:80013990       __ct_i___Q29JGeometry8TVec3_f_Fiii_Pv
  0002:80013DF0       std::atan2((float,float))
+ 0002:80014980       addHitSensorEye__2MRFP9LiveActorPCcUsfRCQ29JGeometry8TVec3_f_
  0002:80015390       MR::tryUpdateHitSensorsAll((LiveActor *))
  0002:800153D0       MR::updateHitSensorsAll((LiveActor *))
  0002:800153E0       HitSensor::isType(const(ulong))
@@ -67,13 +69,14 @@
  0002:8001A960       MR::onSwitchDead((LiveActor *))
  0002:8001B91C       def_8001B7B4
  0002:8001F650       MR::registerDemoSimpleCastAll((LiveActor *))
- 0002:80021280       nullsub_23
+ 0002:80021280       __ct__Q29JGeometry8TVec3_f_Fv
  0002:80022BC0       MR::emitEffect((LiveActor *,char const *))
  0002:80022E80       MR::deleteEffect((LiveActor *,char const *))
  0002:80025520       MR::isFileExist((char const *,bool))
  0002:80025570       MR::isFileExist((char const *,bool))
  0002:80025950       MR::makeScenarioArchiveFileName((char *,ulong,char const *))
  0002:80025B50       MR::receiveFile((char const *))
+ 0002:80026040       FootPrint::setTexture((ResTIMG *))
  0002:800269E0       NameObj::unk2((void))
  0002:800269F0       NameObj::unk1((void))
  0002:80026C90       FurDrawManager::add((FurCtrl *,uchar))
@@ -120,6 +123,8 @@
  0002:8002D460       MR::getJoint((LiveActor const *,char const *))
  0002:8002D4A0       MR::getJoint((LiveActor const *,ushort))
  0002:8002DDF0       nw4r::lyt::Pane::GetRuntimeTypeInfo(const(void))
+ 0002:8002DEE0       GetBeginIter__Q34nw4r2ut28LinkList_Q34nw4r3lyt4Pane_4_Fv
+ 0002:8002E170       j_GetBeginIter__Q34nw4r2ut28LinkList_Q34nw4r3lyt4Pane_4_Fv
  0002:8002EDD0       MR::hidePane((LayoutActor *,char const *))
  0002:8002EFD0       copyPaneTrans__2MRFPQ29JGeometry8TVec2_f_PC11LayoutActorPCc
  0002:8002F330       MR::setLayoutScalePosAtPaneScaleTransIfExecCalcAnim((LayoutActor *,LayoutActor const *,char const *))
@@ -160,6 +165,7 @@
  0002:80035190       MR::createCollisionPartsFromLiveActor((LiveActor *,char const *,HitSensor *,float *[4],MR::CollisionScaleType))
  0002:80035200       createCollisionPartsFromResourceHolder__2MRFP14ResourceHolderPCcP9HitSensorRCQ29JGeometry64TPosition3_Q29JGeometry38TMatrix34_Q29JGeometry13SMatrix34C_f___Q22MR18CollisionScaleType
  0002:80035450       MR::validateCollisionParts((LiveActor *))
+ 0002:800354D0       MR::validateCollisionParts((CollisionParts *))
  0002:80035520       MR::invalidateCollisionParts((LiveActor *))
  0002:80035530       MR::invalidateCollisionParts((CollisionParts *))
  0002:800357D0       MR::setCollisionMtx((LiveActor *))
@@ -180,24 +186,30 @@
  0002:80040E10       MR::becomeCurrentHeap((JKRHeap *))
  0002:80040E70       MR::isEqualCurrentHeap((JKRHeap *))
  0002:80040E90       MR::adjustHeapSize((JKRExpHeap *,char const *))
+ 0002:80040EA0       KCollisionServer::isBinaryInitialized((void const *))
  0002:800411D0       MR::zeroMemory((void *,ulong))
+ 0002:800413C0       MR::getGameMessageDirect((char const *))
  0002:80042C70       MR::getJ3DModel((LiveActor const *))
  0002:80042C90       MR::calcJ3DModel((LiveActor *))
  0002:80042CF0       MR::getJ3DModelData((LiveActor const *))
  0002:80043A40       MR::getResTIMG((LiveActor const *,int))
  0002:80043A80       MR::getResTIMG((J3DModelData const *,int))
  0002:80043AA0       MR::getTexture((ResourceHolder *,char const *))
+ 0002:80044860       MR::makeMtxRotate((float *[4],float,float,float))
+ 0002:80046D30       extractMtxTrans__2MRFPA4_fPQ29JGeometry8TVec3_f_
  0002:80047A50       MR::isStep((NerveExecutor const *,long))
  0002:80047A90       MR::isFirstStep((NerveExecutor const *))
  0002:80047AA0       MR::isLessStep((NerveExecutor const *,long))
  0002:80047AE0       MR::isLessEqualStep((NerveExecutor const *,long))
  0002:8004A148       def_8004A068
  0002:8004AC30       MR::registerNameObjToExecuteHolder((NameObj *,int,int,int,int))
+ 0002:8004AC40       MR::connectToScene((NameObj *,int,int,int,int))
  0002:8004ADA0       MR::connectToSceneEnemy((LiveActor *))
  0002:8004B7F0       NameObjFunction::requestMovementOn((NameObj *))
  0002:8004B850       NameObjFunction::requestMovementOn((NameObj *))
  0002:8004B860       NameObjFunction::requestMovementOff((NameObj *))
  0002:8004B8C0       NameObjFunction::requestMovementOff((NameObj *))
+ 0002:8004BF10       MR::loadTexFromArc((char const *,char const *))
  0002:8004DCF0       LiveActor::~LiveActor((void))
  0002:8004E990       LiveActor::updateHitSensor((HitSensor *))
  0002:800508DC       def_8005086C
@@ -222,6 +234,8 @@
  0002:8005B8B0       nullsub_26
  0002:8005C0D0       initStarPointerTarget__2MRFP9LiveActorfRCQ29JGeometry8TVec3_f_
  0002:8005D7C0       set_f___Q29JGeometry8TVec2_f_FRCQ29JGeometry8TVec2_f__v
+ 0002:8005F000       MR::addFilePrefix((char *,ulong,char const *,char const *))
+ 0002:8005F030       MR::makeDateString((wchar_t *,long,long,long,long))
  0002:8005F400       j_strncpy
  0002:8005F530       MR::extractString((char *,char const *,ulong,ulong))
  0002:8005F5D0       MR::isEqualString((char const *,char const *))
@@ -244,6 +258,8 @@
  0002:80063510       MR::BothDirPtrLink::BothDirPtrLink((void *))
  0002:800636A0       MR::BothDirPtrList::append((MR::BothDirPtrLink *))
  0002:80063750       MR::BothDirPtrList::remove((MR::BothDirPtrLink *))
+ 0002:80067610       JMapInfo::JMapInfo((void))
+ 0002:80067670       JMapInfo::attach((void const *))
  0002:800676B0       JMapInfo::searchItemInfo(const(char const *))
  0002:80067790       JMapInfo::getValueFast(const(int,int,char const **))
  0002:80067BE0       JointController::JointController((void))
@@ -283,6 +299,11 @@
  0002:80069350       AnmPlayerBase::start((char const *))
  0002:800693F0       nullsub_114
  0002:80069440       nullsub_115
+ 0002:8006FD20       AreaFormCube::getBaseSize((void))
+ 0002:80073160       AreaPolygon::AreaPolygon((void))
+ 0002:800731C0       DynamicCollisionObj::~DynamicCollisionObj((void))
+ 0002:80073220       AreaPolygon::init((JMapInfoIter const &))
+ 0002:800733C0       AreaPolygon::setSurface((long))
  0002:800738D0       LiveActor::control((void))
  0002:80073D10       nullsub_15
  0002:80084400       nullsub_21
@@ -440,6 +461,8 @@
  0002:8023D990       RailRider::initBezierRail((JMapInfoIter const &,JMapInfo const *))
  0002:8023DA30       RailRider::syncPosDir((void))
  0002:8023DE60       RailRider::getNextPointNo(const(void))
+ 0002:8023DEE0       SensorGroup::SensorGroup((int,char const *))
+ 0002:8023E020       SensorHitChecker::SensorHitChecker((char const *))
  0002:8023F870       ShadowController::onVisibleSyncHost((void))
  0002:8023F880       ShadowController::offVisibleSyncHost((void))
  0002:8023F950       MR::requestCalcActorShadow((LiveActor *))
@@ -459,7 +482,23 @@
  0002:802461E0       calcDirection__10BezierRailCFPQ29JGeometry8TVec3_f_f
  0002:80246430       BezierRail::getRailPosCoord(const(int))
  0002:80246480       BezierRail::calcCurrentRailCtrlPointIter(const(JMapInfoIter *,float,bool))
+ 0002:80247B40       CollisionCategorizedKeeper::CollisionCategorizedKeeper((long))
+ 0002:802491D0       CollisionCode::CollisionCode((void))
+ 0002:80249FB0       CollisionParts::CollisionParts((void))
+ 0002:8024A0F0       init__14CollisionPartsFRCQ29JGeometry64TPosition3_Q29JGeometry38TMatrix34_Q29JGeometry13SMatrix34C_f___P9HitSensorPCvPCvlb
  0002:802565B0       nullsub_86
+ 0002:80256A30       Triangle::Triangle((void))
+ 0002:802570C0       HitInfo::HitInfo((void))
+ 0002:802571A0       KCollisionServer::KCollisionServer((void))
+ 0002:80257200       KCollisionServer::init((void *,void const *))
+ 0002:80257250       KCollisionServer::setData((void *))
+ 0002:802572D0       KCollisionServer::calcFarthestVertexDistance((void))
+ 0002:80257460       isKCollisionServerBinaryInitailized
+ 0002:80259A30       KCollisionServer::getFaceNormal(const(KC_PrismData const *))
+ 0002:80259AB0       KCollisionServer::getNormal(const(ulong))
+ 0002:80259AD0       KCollisionServer::calXvec(const(Fxyz const *,Fxyz const *,Fxyz *))
+ 0002:80259D20       KCollisionServer::getPrismData(const(ulong))
+ 0002:80259D40       KCollisionServer::getTriangleNum(const(void))
  0002:8025C110       nullsub_110
  0002:80266720       RailPart::RailPart((void))
  0002:80266730       init__8RailPartFRCQ29JGeometry8TVec3_f_RCQ29JGeometry8TVec3_f_RCQ29JGeometry8TVec3_f_RCQ29JGeometry8TVec3_f_
@@ -470,6 +509,12 @@
  0002:8026F7E0       nullsub_85
  0002:8026F7F0       nullsub_84
  0002:8026F800       nullsub_83
+ 0002:80295EA0       DynamicCollisionObj::DynamicCollisionObj((char const *))
+ 0002:80295F10       DynamicCollisionObj::init((JMapInfoIter const &))
+ 0002:80295F60       DynamicCollisionObj::createCollision((void))
+ 0002:80296160       DynamicCollisionObj::updateTriangle((void))
+ 0002:80296410       DynamicCollisionObj::updateCollisionHeader((void))
+ 0002:802A7AF0       GCaptureRibbon::init((JMapInfoIter const &))
  0002:802B2FA0       nullsub_87
  0002:802CAAD0       nullsub_90
  0002:802CF650       nullsub_102
@@ -484,6 +529,9 @@
  0002:802FE8D0       nullsub_94
  0002:802FE8E0       nullsub_95
  0002:80327150       nullsub_96
+ 0002:8032DB10       YoshiBlockCollision::YoshiBlockCollision((void))
+ 0002:8032DB70       YoshiBlockCollision::init((JMapInfoIter const &))
+ 0002:8032ED10       YoshiBlockCollision::~YoshiBlockCollision(void)
  0002:8032FF80       nullsub_97
  0002:80333400       nullsub_98
  0002:80333410       nullsub_99
@@ -532,9 +580,22 @@
  0002:80354128       def_80354020
  0002:80357F40       def_80357DF8
  0002:80378980       nullsub_34
+ 0002:80378F00       TalkDirector::TalkDirector((char const *))
  0002:8037B134       def_8037B034
  0002:8037B388       def_8037B298
  0002:8037B720       def_8037B690
+ 0002:8037B870       TalkMessageInfo::TalkMessageInfo((void))
+ 0002:8037B8A0       TalkMessageInfo::isNormalTalk(const(void))
+ 0002:8037B8B0       TalkMessageInfo::isShortTalk(const(void))
+ 0002:8037B910       TalkMessageInfo::isComposeTalk(const(void))
+ 0002:8037B930       TalkMessageInfo::isBalloonCall(const(void))
+ 0002:8037B950       TalkMessageInfo::isBalloonFix(const(void))
+ 0002:8037B970       TalkMessageInfo::isBalloonSign(const(void))
+ 0002:8037B990       TalkMessageInfo::isCameraNormal(const(void))
+ 0002:8037B9A0       TalkMessageInfo::isCameraEvent(const(void))
+ 0002:8037BA00       TalkMessageHistory::entry((ushort))
+ 0002:8037BA20       TalkMessageHistory::search(const(ushort))
+ 0002:8037BA60       TalkNodeCtrl::TalkNodeCtrl((void))
  0002:80381930       nullsub_100
  0002:80393764       def_803934B0
  0002:80393B00       def_80393ADC
@@ -565,6 +626,8 @@
  0002:80459000       nullsub_36
  0002:80459820       MR::notifyRequestNameObjMovementOnOff((void))
  0002:80459A00       SceneObjHolder::getObj(const(int))
+ 0002:80459A10       SceneObjHolder::isExist(const(int))
+ 0002:80459A30       SceneObjHolder::newEachObj((int))
  0002:8045A918       def_80459A64
  0002:8045A970       MR::getSceneObjHolder((void))
  0002:8045B9C0       StageDataHolder::getCommonPathPointInfoFromRailDataIndex(const(JMapInfo const **,int))
@@ -591,12 +654,16 @@
  0002:8047A560       LayoutActor::initLayoutManager((char const *,ulong))
  0002:8047A840       LayoutActorFlag::LayoutActorFlag((void))
  0002:8047B370       convertLayoutPosToScreenPos__2MRFPQ29JGeometry8TVec2_f_RCQ29JGeometry8TVec2_f_
+ 0002:8047B820       __ml__Q44nw4r2ut28LinkList_Q34nw4r3lyt4Pane_4_8IteratorCFv
  0002:8047D4A0       LayoutHolder::isExistResOther(const(char const *))
  0002:8047D4B0       LayoutHolder::getResOther(const(ulong))
  0002:8047D4C0       LayoutHolder::getResOtherNum(const(void))
+ 0002:8047D4D0       LayoutManager::removeUnnecessaryPanes((nw4r::lyt::Pane *))
+ 0002:8047D7F0       __ct__Q327_unnamed_LayoutManager_cpp_5Local12BitFlag_128_Fv
  0002:80486550       nullsub_17
  0002:80486750       nullsub_103
  0002:804868C0       nullsub_104
+ 0002:8048CE40       ReplaceTagFunction::ReplaceArgs((wchar_t *,long,wchar_t const *,...))
  0002:8048CF20       SaveIcon::SaveIcon((LayoutActor const *))
  0002:8048CF90       SaveIcon::appear((void))
  0002:8048CFD0       SaveIcon::calcAnim((void))
@@ -694,6 +761,7 @@
  0002:804B9400       GameSystemObjHolder::initResourceHolderManager((void))
  0002:804B9440       GameSystemObjHolder::initGameController((void))
  0002:804B94A0       GameSystemObjHolder::initDisplay((void))
+ 0002:804B95C0       MR::getGameSystemObjHolder((void))
  0002:804B9E10       GameSystemResetAndPowerProcess::GameSystemResetAndPowerProcess((void))
  0002:804BA120       GameSystemSceneController::GameSystemSceneController((void))
  0002:804BA780       GameSystemSceneController::drawScene((void))
@@ -870,6 +938,7 @@
  0002:804DEFE0       UserFile::UserFile((void))
  0002:804E0690       nullsub_44
  0002:804EF760       NerveExecutor::updateNerve((void))
+ 0002:804FE6C0       MR::getGameMessageDirect((char const *))
  0002:804FE6E0       NWC24Messenger::NWC24Messenger((char const *))
  0002:804FE7C0       NWC24MessengerSub::SendTask::SendTask((void))
  0002:804FEC60       NWC24MessengerSub::SendState::SendState((NWC24Messenger *))
@@ -896,6 +965,12 @@
  0002:80501A70       JKRExpHeap::create((ulong,JKRHeap *,bool))
  0002:80501C90       JKRExpHeap::JKRExpHeap((void *,ulong,JKRHeap *,bool))
  0002:80503F00       JKRUnitHeap::create((ulong,ulong,ulong,JKRHeap *,bool))
+ 0002:805050A0       JUtility::TColor::__as((JUtility::TColor const &))
+ 0002:805050F0       __sinit__JKRThread_cpp
+ 0002:80505160       __ct__19JSUList_9JKRThread_Fb
+ 0002:80505190       __dt__19JSUList_9JKRThread_Fv
+ 0002:805051F0       __ct__17JSUList_7JKRTask_Fv
+ 0002:80505220       __dt__17JSUList_7JKRTask_Fv
  0002:80505280       JKRAram::create((ulong,ulong,long,long,long))
  0002:805057D0       JKRAram::aramToMainRam((ulong,uchar *,ulong,JKRExpandSwitch,ulong,JKRHeap *,int,ulong *))
  0002:80507E60       JKRArchive::countResource(const(void))
@@ -905,8 +980,24 @@
  0002:80509600       JKRAramArchive::fetchResource_subroutine((ulong,ulong,uchar *,ulong,int))
  0002:805096C0       JKRAramArchive::fetchResource_subroutine((ulong,ulong,JKRHeap *,int,uchar **))
  0002:8050ABB0       JKRCompArchive::fetchResource((JKRArchive::SDIFileEntry *,ulong *))
+ 0002:8050D930       JSUPtrList::~JSUPtrList((void))
+ 0002:8050E860       JUTTexture::storeTIMG((ResTIMG const *,uchar))
+ 0002:8050E9E0       JUTTexture::setEmbPaletteDelFlag((bool))
+ 0002:8050EB30       JUTTexture::attachPalette((JUTPalette *))
+ 0002:8050EB70       JUTTexture::init((void))
+ 0002:8050EBA0       JUTTexture::initTexObj((void))
+ 0002:8050ECA0       JUTTexture::initTexObj((_GXTlut))
+ 0002:8050EDA0       JUTTexture::load((_GXTexMapID))
+ 0002:8050EE00       JUTTexture::capture((int,int,_GXTexFmt,bool,uchar))
+ 0002:8050EEC0       JUTPalette::storeTLUT((_GXTlut,ResTLUT *))
+ 0002:8050EF50       JUTPalette::storeTLUT((_GXTlut,_GXTlutFmt,JUTTransparency,ushort,void *))
+ 0002:8050EF80       JUTPalette::load((void))
+ 0002:8050F000       JUTNameTab::JUTNameTab((ResNTAB const *))
+ 0002:8050F040       JUTNameTab::setResource((ResNTAB const *))
  0002:8050F080       JUTNameTab::getIndex(const(char const *))
  0002:8050F120       JUTNameTab::getName(const(ushort))
+ 0002:8050F180       JUTNameTab::~JUTNameTab((void))
+ 0002:8050F1C0       JUTFont::setCharColor((JUtility::TColor))
  0002:8050F7D0       JUTException::panic_f((char const *,int,char const *,...))
  0002:80510810       JUTException::waitTime((long))
  0002:805113C0       nullsub_2
@@ -938,6 +1029,8 @@
  0002:8053AD30       __ct__Q25JMath22TAsinAcosTable_1024_f_Fv
  0002:8053C094       def_8053BFB4
  0002:8053C3F0       def_8053C310
+ 0002:8053CCB0       JPAResource::drawC((JPAEmitterWorkData *))
+ 0002:8053CFA0       JPAResource::setPTev((void))
  0002:8053D644       def_8053D5C0
  0002:8053EAD0       nullsub_45
  0002:8054198C       def_805417FC
@@ -1021,8 +1114,33 @@
  0002:80564A10       NWC24iSynchronizeRtcCounter
  0002:8057DD20       nullsub_4
  0002:8057EBD0       def_8057EBC4
+ 0002:8057F8E0       VFSysPDMDisk2DriveP
  0002:80580D20       nullsub_46
- 0002:805833F0       nullsub_5
+ 0002:80580D80       dCommon_GetPhysicalOffset
+ 0002:805810E0       dCommon_ReadDummyBPB
+ 0002:80581260       dCommon_WriteDummyBPB
+ 0002:80581460       dCommon_getFileSizeFromDisk
+ 0002:80581580       dCommon_setLastDeviceErrorToDisk
+ 0002:805815F0       dCommon_setFatTypeToDisk
+ 0002:80581650       dCommon_getResvSecNumFromDisk
+ 0002:80581F60       A32_NANDRead
+ 0002:80582310       A32_NANDWrite
+ 0002:80582580       _MountPrfFile
+ 0002:80582C30       nanddrv_BuildUpFSInfoSector
+ 0002:80582C70       nanddrv_BuildUpBootSector
+ 0002:80582D70       nanddrv_mount
+ 0002:80582DE0       nanddrv_format
+ 0002:80583090       VFi_nanddrv_init_drv_tbl
+ 0002:80583250       nanddrv_physical_write
+ 0002:805833F0       VFi_InitSDWrok
+ 0002:80583400       JASCalc::imixcopy((short const *,short const *,short *,ulong))
+ 0002:80583430       JASCalc::bcopyfast((void const *,void *,ulong))
+ 0002:80583470       JASCalc::bcopy((void const *,void *,ulong))
+ 0002:80583550       JASCalc::bzerofast((void *,ulong))
+ 0002:80583580       JASCalc::bzero((void *,ulong))
+ 0002:80583650       JASCalc::pow2((float))
+ 0002:805839C0       alloc__64JASMemChunkPool_1024_Q217JASThreadingModel19ObjectLevelLockable_FUl
+ 0002:80584A70       JASKernel::getCommandHeap((void))
  0002:80587230       nullsub_47
  0002:80587350       nullsub_48
  0002:80588000       def_80587F58
@@ -1083,6 +1201,8 @@
  0002:805B2B90       PPCMffpscr
  0002:805B2BB0       PPCMtfpscr
  0002:805B2BE0       PPCMfhid2
+ 0002:805B2BF0       PPCMthid2
+ 0002:805B2C10       PPCMtwpar
  0002:805B3770       OSInit
  0002:805B40D0       OSRegisterVersion
  0002:805B41F0       OSCreateAlarm
@@ -1112,6 +1232,7 @@
  0002:805B53F0       DCEnable
  0002:805B5410       DCInvalidateRange
  0002:805B5440       DCFlushRange
+ 0002:805B5500       DCZeroRange
  0002:805B5530       ICInvalidateRange
  0002:805B5570       ICFlashInvalidate
  0002:805B55D0       DMAErrorHandler
@@ -1198,6 +1319,7 @@
  0002:805BED9C       def_805BEBBC
  0002:805BF260       __OSWriteStateFlags
  0002:805BF350       __OSReadStateFlags
+ 0002:805BF540       __OSCreateNandbootInfo
  0002:805BF750       OSPlayTimeIsLimited
  0002:805BF930       __OSWriteExpiredFlag
  0002:805BFC00       __OSGetPlayTime
@@ -1222,11 +1344,16 @@
  0002:805C7850       __VISetRevolutionModeSimple
  0002:805C7D30       PSMTXCopy
  0002:805C7D70       PSMTXConcat
+ 0002:805C7E40       PSMTXInverse
+ 0002:805C81F0       PSMTXTrans
  0002:805C8230       PSMTXTransApply
  0002:805C8280       PSMTXScale
  0002:805C8910       C_MTXOrtho
+ 0002:805C8B60       PSVECMag
  0002:805C8C10       PSVECDistance
+ 0002:805C92F0       __GXInitRevisionBits
  0002:805C9420       GXInit
+ 0002:805C9930       __GXInitGX
  0002:805CA350       GXInitFifoBase
  0002:805CA4E0       GXSetCPUFifo
  0002:805CA6C0       GXSetGPFifo
@@ -1243,11 +1370,15 @@
  0002:805CBA30       GXSetMisc
  0002:805CBAB0       GXFlush
  0002:805CBFF0       GXDrawDone
+ 0002:805CC0C0       GXPixModeSync
+ 0002:805CC440       n__GXPEInit
  0002:805CC4B0       __GXSetDirtyState
  0002:805CC730       GXBegin
  0002:805CCA20       GXSetCullMode
  0002:805CCAC0       GXSetDispCopySrc
+ 0002:805CCB00       GXSetTexCopySrc
  0002:805CCB40       GXSetDispCopyDst
+ 0002:805CCB70       GXSetTexCopyDst
  0002:805CCCA0       GXSetCopyClamp
  0002:805CCCD0       GXGetNumXfbLines
  0002:805CCD60       GXGetYScaleFactor
@@ -1255,13 +1386,28 @@
  0002:805CD060       GXSetCopyClear
  0002:805CD0E0       GXSetCopyFilter
  0002:805CD2D0       GXSetDispCopyGamma
+ 0002:805CD430       GXCopyTex
  0002:805CDC20       GXSetNumChans
  0002:805CDC50       GXSetChanCtrl
  0002:805CDD44       def_805CDD1C
  0002:805CDE74       def_805CDE4C
+ 0002:805CDEF0       GXInitTexObj
  0002:805CE098       def_805CE030
+ 0002:805CE100       GXInitTexObjCI
+ 0002:805CE150       GXInitTexObjLOD
  0002:805CE5F0       GXLoadTexObj
+ 0002:805CE650       GXInitTlutObj
+ 0002:805CE680       GXLoadTlut
+ 0002:805CE720       GXInitTexCacheRegion
+ 0002:805CE7D0       GXInitTlutRegion
+ 0002:805CE7F0       GXInvalidateTexAll
+ 0002:805CE840       GXSetTexRegionCallback
+ 0002:805CE860       GXSetTlutRegionCallback
+ 0002:805CEBE0       __GXSetTmemConfig
+ 0002:805CEF30       GXSetTevIndirect
  0002:805CF380       nullsub_6
+ 0002:805CF390       __GXSetIndirectMask
+ 0002:805CF3C0       __GXFlushTextureState
  0002:805CF490       GXSetTevColorIn
  0002:805CF4D0       GXSetTevAlphaIn
  0002:805CF510       GXSetTevColorOp
@@ -1322,17 +1468,35 @@
  0002:805DC690       MEMFreeToExpHeap
  0002:805DC760       MEMGetAllocatableSizeForExpHeapEx
  0002:805DC8C0       MEMFreeToAllocator
+ 0002:805DCF90       nandCreate
  0002:805DD150       NANDPrivateCreate
+ 0002:805DD1D0       NANDPrivateCreateAsync
+ 0002:805DD300       NANDPrivateDelete
  0002:805DD4D0       NANDReadAsync
  0002:805DD5C0       NANDWriteAsync
+ 0002:805DD640       NANDSeek
  0002:805DD6E0       NANDSeekAsync
+ 0002:805DDDA0       nandComposePerm
+ 0002:805DDE00       nandSplitPerm
+ 0002:805DDE90       nandGetStatus
+ 0002:805DDFF0       nandGetStatusCallback
+ 0002:805DE070       NANDGetStatus
+ 0002:805DE0E0       NANDPrivateGetStatus
+ 0002:805DE150       NANDPrivateGetStatusAsync
+ 0002:805DE1E0       NANDSetUserData
+ 0002:805DE1F0       NANDGetUserData
  0002:805DE6E0       NANDPrivateOpen
  0002:805DE770       NANDOpenAsync
+ 0002:805DE8F0       NANDClose
  0002:805DE960       NANDCloseAsync
  0002:805DEF0C       def_805DEC4C
  0002:805DF340       nandCloseCallback
+ 0002:805DF760       nandIsPrivatePath
+ 0002:805DF7A0       nandIsUnderPrivatePath
  0002:805DF800       nandIsInitialized
  0002:805DF840       nandConvertErrorCode
+ 0002:805DF9F0       nandGenerateAbsPath
+ 0002:805DFDF0       nandCallback
  0002:805E0500       NANDLoggingAddMessageAsync
  0002:805E16B0       UnpackItem
  0002:805E1830       DeleteItemByID
@@ -1367,6 +1531,9 @@
  0002:805E56E0       IOS_IoctlvReboot
  0002:805E5D40       iosAllocAligned
  0002:805E6480       _isfsFuncCb
+ 0002:805E6C10       ISFS_GetAttrAsync
+ 0002:805E7260       ISFS_CreateFile
+ 0002:805E7360       ISFS_CreateFileAsync
  0002:805E79C0       j_IOS_Close
  0002:805E79D0       ISFS_CloseAsync
  0002:805E8134       def_805E80F0
@@ -1456,7 +1623,8 @@
  0002:8062E0CC       __save_fpr27
  0002:8062E0E4       __restore_fpr
  0002:8062E13C       _savegpr_17
- 0002:8062E14C       _savegpr_19
+ 0002:8062E144       _savegpr_19
+ 0002:8062E14C       _savegpr_21
  0002:8062E150       _savegpr_22
  0002:8062E154       _savegpr_23
  0002:8062E158       _savegpr_24
@@ -1466,6 +1634,7 @@
  0002:8062E168       _savegpr_28
  0002:8062E16C       _savegpr_29
  0002:8062E188       _restgpr_17
+ 0002:8062E190       _restgpr_19
  0002:8062E1A0       _restgpr_23
  0002:8062E1A4       _restgpr_24
  0002:8062E1A8       _restgpr_25
@@ -1543,7 +1712,7 @@
  0002:8063531C       strcpy
  0002:806353DC       strncpy
  0002:80635420       strcat
- 0002:8063544C       strcmp
+ 0002:80635568       strcmp
  0002:806355A8       strchr
  0002:80635620       strstr
  0002:80637E54       def_80637C60
@@ -1607,6 +1776,7 @@
  0002:8063F700       TRKTerminateSerialHandler
  0002:8063FD48       TRKTargetContinue
  0002:8063FD7C       TRKSaveExtended1Block
+ 0002:8063FF40       TRKRestoreExtended1Block
  0002:806401C4       TRKGetBuffer
  0002:80640CA4       def_80640C78
  0002:80640EB4       def_80640E88
@@ -1932,6 +2102,7 @@
  0009:8065E592       a000
  0009:8065E5A4       aGalaxynameS
  0009:8065EA44       jpt_8004A068
+ 0009:8065ECB4       aArc
  0009:8066908C       jpt_8005086C
  0009:80669208       jpt_80053CB4
  0009:80669240       aZone
@@ -1942,7 +2113,15 @@
  0009:80669290       aOceanringgalax
  0009:806692A0       aEggstargalaxy
  0009:806692B0       aFileselect
+ 0009:80669414       aBigtree2galaxy_0
+ 0009:80669424       aTamakoroslider_0
+ 0009:8066943C       aAnN
+ 0009:80669470       aMemoryroadgala
+ 0009:806694B8       aCloudgardengal_0
+ 0009:806694CC       aJunglegliderga_1
  0009:80669698       aCamera_1
+ 0009:80669B08       aSS_7
+ 0009:80669B10       aSystemDate000
  0009:80669BB8       jpt_8006173C
  0009:80669BD8       aSoundplayarea
  0009:80669BE8       aSoundemittercu
@@ -2063,6 +2242,9 @@
  0009:8066A70C       aYoshicapturegu
  0009:8066A728       aYoshieatguidan
  0009:8066A740       aYoshisendoffar
+ 0009:8066A950       aEAN
+ 0009:8066A960       aBody_59
+ 0009:8066AA10       aValidity
  0009:8066AEA8       aPlaysound
  0009:8066AEB4       aSoundemittercu_2
  0009:8066AF98       aPlaysound_0
@@ -3138,6 +3320,7 @@
  0009:80695408       aObjectdataSlow
  0009:80695420       aObjectdataSmid
  0009:80695440       aMirrortex
+ 0009:80695900       aPlayer_0
  0009:80695958       aShadowcontroll
  0009:80695FB4       aSpotmarklight
  0009:80695FC4       aAppear_14
@@ -3150,6 +3333,7 @@
  0009:806964EC       aButtbody
  0009:806964F8       aCapposition
  0009:80696504       aWait_13
+ 0009:80696968       aN_2
  0009:80696B38       aSystemFilesele
  0009:80696B54       aSystemFilesele_0
  0009:80696B70       aSystemFilesele_1
@@ -3447,6 +3631,8 @@
  0009:8069F5D0       aColorchange
  0009:8069F5DC       aShadow_5
  0009:8069F5E4       aLight_0
+ 0009:8069F660       aBody_58
+ 0009:8069F6D8       aGravityarrow_0
  0009:8069FC90       aBody0
  0009:8069FC98       aBody1_2
  0009:8069FCA0       aBody2_2
@@ -3470,6 +3656,8 @@
  0009:806A0220       aElectricrailmo
  0009:806A0238       aPointertouch
  0009:806A0248       aElectricrailmo_0
+ 0009:806A1490       aGcaptureribbon_0
+ 0009:806A14A4       aGcaptureribbon
  0009:806A1534       aGcapturetarget
  0009:806A1544       aBody_32
  0009:806A1E08       aChange
@@ -3777,6 +3965,11 @@
  0009:806B14E8       aSwitchenda
  0009:806B14F4       aSwitchendb
  0009:806B1E48       aPanel
+ 0009:806B20E0       aN_3
+ 0009:806B20FC       aBody_60
+ 0009:806B2104       aYoshiblockArc
+ 0009:806B2114       aYoshiblocktexB
+ 0009:806B2128       YoshiBlockCollision::`vtbl'
  0009:806B3388       aMarineplant
  0009:806B3394       aPlanta
  0009:806B339C       aPlantb
@@ -5043,6 +5236,7 @@
  0009:806BEE08       aShake_0
  0009:806BEE10       aLuckydice
  0009:806BF1B4       aTogepinscorer
+ 0009:806BF694       aRabbitfootprin
  0009:806BF948       aBody_49
  0009:806BF950       aShadow_10
  0009:806BF958       aYoshitonguehit_0
@@ -5121,6 +5315,7 @@
  0009:806C5970       aSpine1_1
  0009:806C5978       aSpine2
  0009:806C5980       jpt_803BDCFC
+ 0009:806C5AD8       aFootprintBti_0
  0009:806C5B34       aLuigi
  0009:806C5B3C       aMarioanime
  0009:806C5B48       aElementend
@@ -5850,6 +6045,8 @@
  0009:80703FF4       aJkrheapCpp
  0009:80704940       aBadSequence
  0009:80704954       aJkraramarchive
+ 0009:80704C68       aJutpaletteCpp
+ 0009:80704C78       aJuttextureTlut
  0009:80704CA8       aSystemReset
  0009:80704CB8       aMachineCheck
  0009:80704CC8       aExternalInterr
@@ -6233,6 +6430,8 @@
  0009:8071DC84       aS08xS
  0009:8071DC90       jpt_805DEC4C
  0009:8071DCC0       aRvlSdkNandRele
+ 0009:8071DD70       aShared2
+ 0009:8071DD7C       aShared2_0
  0009:8071FB38       aRvlSdkScReleas
  0009:8071FB80       aIplEula
  0009:8071FB8C       aIplSadr
@@ -6753,9 +6952,11 @@
  0009:80728610       aMetrotrkOption
  0009:8072862F       aEnable
  0009:80728637       aDisable
+ 0009:80728640       gTRKExceptionStatus
  0003:807286B0       sMutex__Q22MR14MutexHolder_1_
  0003:8072B870       sMutex__Q22MR14MutexHolder_2_
  0003:8072B894       MainLoopFrameworkAlarm::sList(void)
+ 0003:8072BBBC       JKRThread::sThreadList(void)
  0003:8072C360       J3DSys::mCurrentMtx(void)
  0003:8077E4C0       __OSRebootParams
  0003:8077E530       __OSErrorTable
@@ -6839,13 +7040,17 @@
  0001:807D09A8       aExpired
  0001:807D09C0       __VIVersion
  0001:807D09D8       aViC
+ 0001:807D0A00       __GXVersion
  0001:807D0A60       __DVDLongFileNameFlag
  0001:807D0A68       aDvdfsC
  0001:807D0A7C       aDvdC
  0001:807D0AA0       aDevDi
  0001:807D0AC8       aS08x
  0001:807D0AD0       aSS_4
+ 0001:807D0AEC       aS_6
  0001:807D0AF0       aSS_5
+ 0001:807D0B00       aMeta
+ 0001:807D0B08       aTicket
  0001:807D0B1C       aIplCb
  0001:807D0B24       aIplAr
  0001:807D0B30       aIplArn
@@ -6971,6 +7176,11 @@
  0003:807D6830       __VIDimmingFlag_Enable
  0003:807D6834       flushFlag3in1
  0003:807D6838       flushFlag
+ 0003:807D6860       __piReg
+ 0003:807D6864       __cpReg
+ 0003:807D6868       __peReg
+ 0003:807D686C       __memReg
+ 0003:807D6884       shutdownFuncRegistered
  0003:807D68C0       currentDirectory
  0003:807D68D0       MaxEntryNum
  0003:807D68D4       FstStringStart
